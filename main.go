@@ -149,7 +149,7 @@ func runUDPClient(addr, file string) {
 
 	buf := make([]byte, 2048)
 	total := 0
-	conn.SetReadDeadline(time.Now().Add(100 * time.Millisecond))
+	conn.SetReadDeadline(time.Now().Add(5 * time.Second))
 	for {
 		n, _, err := conn.ReadFromUDP(buf)
 		if err != nil {
