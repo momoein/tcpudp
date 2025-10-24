@@ -16,8 +16,8 @@ docker compose up -d
 ```
 
 This will spin up:
-• TCP server on port 11001 → 11000
-• UDP server on port 11002 → 11000 (UDP)
+• TCP server on port 1241 → 11000
+• UDP server on port 1242 → 11000 (UDP)
 
 Check running services:
 
@@ -30,13 +30,13 @@ docker compose ps
 🔹 TCP Client:
 
 ```bash
-go run main.go --mode=client --proto=tcp --addr=127.0.0.1:11001
+go run main.go --mode=client --proto=tcp --addr=127.0.0.1:1241
 ```
 
 🔹 UDP Client:
 
 ```bash
-go run main.go --mode=client --proto=udp --addr=127.0.0.1:11002
+go run main.go --mode=client --proto=udp --addr=127.0.0.1:1242
 ```
 
 ### 4️⃣ Stop the Servers

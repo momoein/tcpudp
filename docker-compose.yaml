@@ -3,7 +3,7 @@ services:
     build:
       context: .
     ports:
-      - "11001:11000"
+      - "1241:11000"
     volumes:
       - ./image.jpg:/app/image.jpg:ro
     command: ["--mode=server", "--proto=tcp", "--addr=0.0.0.0:11000"]
@@ -12,7 +12,7 @@ services:
     build:
       context: .
     ports:
-      - "11002:11000/udp"
+      - "1242:11000/udp"
     volumes:
       - ./image.jpg:/app/image.jpg:ro
     command: ["--mode=server", "--proto=udp", "--addr=0.0.0.0:11000"]
