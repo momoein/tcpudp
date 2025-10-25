@@ -208,7 +208,9 @@ func sendFileOverUDP(conn *net.UDPConn, addr *net.UDPAddr, file string) {
 		}
 	}
 
-	conn.WriteToUDP([]byte("EOF"), addr)
+	for range 5 {
+		conn.WriteToUDP([]byte("EOF"), addr)
+	}
 
 	fmt.Printf("Sent %d bytes over UDP to %s\n", total, addr)
 }
